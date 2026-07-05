@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulación Educativa de Phishing</title>
+
+<style>
+
+body{
+    margin:0;
+    background:#f2f2f2;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+.banner{
+    background:#b30000;
+    color:white;
+    text-align:center;
+    padding:12px;
+    font-weight:bold;
+    font-size:18px;
+}
+
+.container{
+
+    width:420px;
+    margin:40px auto;
+    background:white;
+    border-radius:8px;
+    box-shadow:0px 0px 15px rgba(0,0,0,.2);
+}
+
+.logo{
+
+    width:170px;
+    margin-top:15px;
+    margin-bottom:10px;
+
+}
+
+.header{
+
+    background:#ffffff;
+    color:#222;
+    text-align:center;
+    padding:20px;
+    border-bottom:4px solid #0b6e3d;
+
+}
+
+.header h2{
+
+    color:#0b6e3d;
+    margin-top:10px;
+
+}
+.content{
+
+    padding:30px;
+
+}
+
+input{
+
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    margin-bottom:18px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:15px;
+
+}
+
+button{
+
+    width:100%;
+    padding:12px;
+    background:#0b6e3d;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+
+}
+
+button:hover{
+
+    background:#09572f;
+
+}
+
+.footer{
+
+    text-align:center;
+    font-size:12px;
+    color:#666;
+    padding:20px;
+
+}
+
+#resultado{
+
+    display:none;
+    padding:30px;
+    text-align:center;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="banner">
+SIMULACIÓN EDUCATIVA DE PHISHING — NO INGRESES DATOS REALES
+</div>
+
+<div class="container">
+
+<div class="header">
+
+<img src="logo@2x.png" alt="Logotipo de ejemplo" class="logo">
+
+<h2>Portal de Pago (Simulación Académica)</h2>
+
+</div>
+
+<div id="formulario" class="content">
+
+<p>
+Esta página forma parte de una práctica académica sobre ingeniería social.
+</p>
+
+<form id="login">
+
+<label>Usuario</label>
+<input type="text" required>
+
+<label>Contraseña</label>
+<input type="password" required>
+
+<button type="submit">
+Iniciar sesión
+</button>
+
+</form>
+
+</div>
+
+<div id="resultado">
+
+<h2>⚠ Simulación completada</h2>
+
+<p>
+
+Si esta hubiera sido una página maliciosa,
+tus credenciales habrían sido robadas.
+
+</p>
+
+<p>
+
+Antes de iniciar sesión verifica siempre:
+
+</p>
+
+<ul style="text-align:left;display:inline-block;">
+
+<li>✔ El dominio del sitio.</li>
+<li>✔ El certificado HTTPS.</li>
+<li>✔ El remitente del correo.</li>
+<li>✔ Errores ortográficos.</li>
+<li>✔ Solicitudes urgentes de pago.</li>
+
+</ul>
+
+<br><br>
+
+<button onclick="location.reload()">
+Volver
+</button>
+
+</div>
+
+<div class="footer">
+
+Práctica educativa de Sistemas Operativos / Ciberseguridad
+
+</div>
+
+</div>
+
+<script>
+document.getElementById("login").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    alert("Tus datos están comprometidos.\n\nRevisa la fuente antes de compartir cualquier información.");
+
+    document.getElementById("formulario").style.display="none";
+    document.getElementById("resultado").style.display="block";
+
+});
+</script>
+
+</body>
+</html>
